@@ -54,7 +54,7 @@ function sendMessage(theme) {
 
 async function generateResponse(input, theme) {
     try {
-        const response = await fetch('http://127.0.0.1:4000/chat', {
+        const response = await fetch('http://127.0.0.1:4000/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: input, theme: theme })

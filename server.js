@@ -13,7 +13,7 @@ const apiToken = process.env.AI_API_KEY
 app.use(cors());
 app.use(express.json());
 
-app.post('/chat', async (req, res) => {
+app.post('/', async (req, res) => {
   const { message, theme } = req.body;
 
   const client = new OpenAI({
