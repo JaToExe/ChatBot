@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const port = 3003;
+const port = process.env.PORT || 4000;
 
 const apiToken = process.env.AI_API_KEY
 
