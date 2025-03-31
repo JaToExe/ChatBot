@@ -1,9 +1,14 @@
-import { OpenAI } from "openai";
+import OpenAI from "openai";
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = 3003;
+
+const apiToken = process.env.AI_API_KEY
 
 app.use(cors());
 app.use(express.json());
@@ -13,7 +18,7 @@ app.post('/chat', async (req, res) => {
 
   const client = new OpenAI({
     baseURL: "https://models.inference.ai.azure.com",
-    apiKey: "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",
+    apiKey: apiToken
   });
 
   try {
@@ -36,5 +41,5 @@ app.post('/chat', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Serwer działa na porcie ${port}`);
+  console.log(`Server is running at http://127.0.0.1:${port}`);
 });
