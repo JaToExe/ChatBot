@@ -13,7 +13,7 @@ app.post('/chat', async (req, res) => {
 
   const client = new OpenAI({
     baseURL: "https://models.inference.ai.azure.com",
-    apiKey: "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",
+    apiKey: "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",
   });
 
   try {
