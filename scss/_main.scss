@@ -181,6 +181,12 @@ body {
                     caret-color: #EB5E28;
 
                     font-weight: 600;
+
+                    touch-action: none;
+                    -webkit-user-select: none;
+
+                    user-select: none; 
+                    -webkit-touch-callout: none; 
                 }
 
                 .sendBtn {
