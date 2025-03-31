@@ -34,7 +34,6 @@ addEventListener('keydown', (event) => {
     }
 });
 
-
 function sendMessage(theme) {
     const inputElement = document.querySelector('.input');
     const input = inputElement.value.trim();
@@ -42,15 +41,16 @@ function sendMessage(theme) {
 
     if (input === "") {
         return;
-    } else {
+    } else {        
         textBox.innerHTML += `<div class="userText"><p><div class="displayflex"><span class="material-symbols-outlined">person</span></div><p>${input}</p></p></div>`;
     
+        textBox.scrollTop = textBox.scrollHeight;
+
         generateResponse(input, theme);
 
         inputElement.value = "";
     }
 }
-
 
 async function generateResponse(input, theme) {
     try {
@@ -81,4 +81,5 @@ async function generateResponse(input, theme) {
 function showResponse(name, reply) {
     const textBox = document.querySelector('.textBox');
     textBox.innerHTML += `<div class="botText"><p><div class="displayflex"><span class="material-symbols-outlined">robot_2</span></div><p>${reply}</p></p></div>`;
+    textBox.scrollTop = textBox.scrollHeight;
 }
