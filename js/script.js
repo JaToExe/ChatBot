@@ -54,7 +54,7 @@ function sendMessage(theme) {
 
 async function generateResponse(input, theme) {
     try {
-        const response = await fetch('https://chatbot-dq1v.onrender.com/chat', {
+        const response = await fetch('https://chatbot-dq1v.onrender.com:10000/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: input, theme: theme })
