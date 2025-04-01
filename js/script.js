@@ -8,7 +8,7 @@ items.forEach(item => {
 
         if (item.textContent === "🌍 niespecyfikowane") {
             theme = "Polecenie: Odpowiedaj na wszysko po tym:";
-        } else if (item.textContent === "💻 programosanie") {
+        } else if (item.textContent === "💻 programowanie") {
             theme = "Polecenie: Odpowiedaj na wszysko po tym, ale kładź nacisk na programowanie";
         } else if (item.textContent === "➗ matematyka") {
             theme = "Polecenie: Odpowiedaj na wszysko po tym, ale kładź nacisk na matematyka, staraj się wszystko wytłumaczyć";
